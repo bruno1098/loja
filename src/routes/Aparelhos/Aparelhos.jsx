@@ -4,6 +4,7 @@ import aparelhosData from "./Aparelhos.js";
 import "../Home/Home.css";
 import imagemIphone from "../Home/iphone.png";
 import imagemSamsung from "../Home/samsung.png";
+import { Link } from "react-router-dom";
 
 export default function Aparelhos() {
     return (
@@ -11,19 +12,18 @@ export default function Aparelhos() {
             <div className="aparelhos-container">
                 <h2>Todos nossos aparelhos</h2>
                 <ul className="aparelhos-list">
-                    {aparelhosData.map((aparelho) => (
-                        <li key={aparelho.id} className="aparelho-item">
-                            <img
-                                src={`${aparelho.imagem}`}
-                                alt={aparelho.nome}
+                    {aparelhosData.map((aparelhos) => (
+                        <li key={aparelhos.id} className="aparelho-item">
+                            <Link className="aparelho-button" to={`/visualizar/aparelho/${aparelhos.id}`}>{aparelhos.detalhes}</Link>
+                             <img
+                                src={`${aparelhos.imagem}`}
+                                alt={aparelhos.nome}
                                 className="aparelho-image"
                             />
                             <div className="aparelho-details">
-                                <h3>{aparelho.nome}</h3>
-                                <p>Preço: R$ {aparelho.preco.toFixed(2)}</p>
-                                <p>Descrição: {aparelho.descricao}</p>
-                                <button className="aparelho-button">Detalhes</button>
-                            </div>
+                                <h3>{aparelhos.nome}</h3>
+                                
+                            </div> 
                         </li>
                     ))}
                 </ul>

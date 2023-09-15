@@ -1,0 +1,36 @@
+body{
+  background-color: rgb(20, 20, 20);
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+nav{
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  background-color: rgb(50, 50, 51);
+
+  & a{color: white; font-size: 1.5em; padding: 15px;}
+}
+main{
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+footer{
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: rgb(50, 50, 51);
+  color: aliceblue;
+}

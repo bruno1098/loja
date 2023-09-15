@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <Aparelhos/>,
       },
       {
-        path: "/VisualizarAparelho",
+        path: "/visualizar/aparelho/:id",
         element: <VisualizarAparelho/>
       }
     ]
